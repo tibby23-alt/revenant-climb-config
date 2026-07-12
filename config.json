@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "week_id": "1970-01-01",
+  "modifiers": ["crowded_court", "glutted_maw"],
+  "stipend": 240,
+  "_comment": "KILL-SWITCH / no-override default. week_id 1970-01-01 never matches a real UTC window, so every client fails validation and falls through to deterministic derivation (the shipped path). This file proves the fetch pipe works without overriding any week. TO CURATE a week: change week_id to that window's UTC Sunday start date and set a legal modifier pair. TO HARD-KILL: leave this as-is or delete the file entirely; both force derivation."
+}
