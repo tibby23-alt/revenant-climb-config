@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "week_id": "2026-07-12",
-  "modifiers": ["glass_climb", "surging_ash"],
+  "week_id": "1970-01-01",
+  "modifiers": ["crowded_court", "glutted_maw"],
   "stipend": 240,
-  "_comment": "TEMPORARY OVERRIDE TEST. week_id 2026-07-12 = window 131 (Sunday 07:00 UTC start), the live window. Curates a legal contrasting pair (glass_climb+surging_ash, survival-stress) so an override is VISIBLE in-game vs derivation: SUCCESS = offense UNLOCKED (Sharpen/Keen Edge/Deadeye buyable), which is NOT the no_edge-locked derivation. Confirm the harness header prints week_id 2026-07-12 before booting, and RELAUNCH the game after the challenge_mode.gd transport fix. AFTER the test, revert to kill-switch (week_id 1970-01-01)."
+  "_comment": "KILL-SWITCH / no-override default. week_id 1970-01-01 never matches a real UTC window, so every client fails validation and falls through to deterministic derivation (the shipped path). This file proves the fetch pipe works without overriding any week. TO CURATE a week: change week_id to that window's UTC Sunday start date and set a legal modifier pair. TO HARD-KILL: leave this as-is or delete the file entirely; both force derivation."
 }
