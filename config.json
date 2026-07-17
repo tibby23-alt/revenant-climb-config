@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "week_id": "2026-07-12",
+  "week_id": "1970-01-01",
   "modifiers": ["crowded_court", "glutted_maw"],
-  "stipend": 999,
-  "_comment": "TEMPORARY D6 VERIFICATION OVERRIDE, NOT SHIPPABLE. week_id 2026-07-12 is window 131's UTC start, so this MATCHES the live window and the fetch path applies it instead of falling through to derivation. stipend 999 is the observable: derivation hardcodes 240, so 999 in the sealed wallet proves the transport fetched, validated, and applied. Modifiers are unchanged from the kill-switch (already known-legal; they are not the observable). RESTORE THE KILL-SWITCH AFTER THE TEST. This override self-expires when window 132 opens 2026-07-19 07:00 UTC, after which week_id no longer matches and every client falls through to derivation."
+  "stipend": 240,
+  "_comment": "KILL-SWITCH / no-override default. week_id 1970-01-01 never matches a real UTC window, so every client fails validation and falls through to deterministic derivation (the shipped path). This file proves the fetch pipe works without overriding any week. TO CURATE a week: change week_id to that window's UTC Sunday start date and set a legal modifier pair. TO HARD-KILL: leave this as-is or delete the file entirely; both force derivation."
 }
