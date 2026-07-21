@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "week_id": "2026-07-12",
+  "week_id": "1970-01-01",
   "modifiers": ["crowded_court", "glutted_maw"],
   "stipend": 240,
-  "_comment": "TEMPORARY PLAYTEST PROBE, NOT SHIPPABLE. week_id 2026-07-12 matches the live window (131) so this override applies. Pair crowded_court + glutted_maw is legal (crowded_court is pace-group, glutted_maw is ungrouped, sorted key not in explicit exclusions) and neither is no_edge, so the OFFENSE tree (Sharpen/Keen Edge/Deadeye) is UNLOCKED. Purpose: test whether the attack-scaled devourables (Ruin/Flame via Gravecall/Ember Lash) and Maw's second slot come alive when offense is buyable, the one question window 131's no_edge lock structurally could not answer. stipend 240 = normal sealed budget. RESTORE THE KILL-SWITCH AFTER PROBING (config.killswitch.json)."
+  "_comment": "KILL-SWITCH / no-override default. week_id 1970-01-01 never matches a real UTC window, so every client fails validation and falls through to deterministic derivation (the shipped path). This file proves the fetch pipe works without overriding any week. TO CURATE a week: change week_id to that window's UTC Sunday start date and set a legal modifier pair. TO HARD-KILL: leave this as-is or delete the file entirely; both force derivation."
 }
