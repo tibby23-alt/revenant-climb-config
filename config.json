@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "week_id": "1970-01-01",
-  "modifiers": ["crowded_court", "glutted_maw"],
+  "week_id": "2026-11-22",
+  "modifiers": ["glass_climb", "bare_bones"],
   "stipend": 240,
-  "_comment": "KILL-SWITCH / no-override default. week_id 1970-01-01 never matches a real UTC window, so every client fails validation and falls through to deterministic derivation (the shipped path). This file proves the fetch pipe works without overriding any week. TO CURATE a week: change week_id to that window's UTC Sunday start date and set a legal modifier pair. TO HARD-KILL: leave this as-is or delete the file entirely; both force derivation."
+  "_comment": "ONE-WEEK OVERRIDE for window 2026-11-22 (ends 2026-11-29 07:00 UTC). 0.3.0 clients derive deep_start + glass_climb for this week, which kills nearly every build on its first floor (score 0). 0.4.0 excludes that pair and derives glass_climb + bare_bones with the default seed; this override gives 0.3.0 clients the same pair and seed, so both versions play one week on one board. After the window ends the week_id no longer matches and every client derives again. RESTORE THE KILL-SWITCH (week_id 1970-01-01) after the week, as before."
 }
